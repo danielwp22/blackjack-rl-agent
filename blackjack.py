@@ -90,6 +90,7 @@ data.insert(0,["State", "Action", "Reward"])
 print(tabulate(data, headers="firstrow", tablefmt="grid"))
 
     
+
 print(f"episode numbers: {episode_numbers}, episode rewards{episode_rewards}")
 plt.plot(episode_numbers, episode_rewards)
 plt.xlabel("Episode number")
