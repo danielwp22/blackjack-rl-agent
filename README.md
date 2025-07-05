@@ -1,5 +1,6 @@
-#Blackjack solver using Q-Learning
-##Using Gymnasium from OpenAI's Gym. 
+# Blackjack solver using Q-Learning
+
+## Using Gymnasium from OpenAI's Gym. 
 
 A blackjack environment was created in which a player and the dealer are dealt cards from 1 to 11.
 The player has two actions, hit or stand. If the player hits, they get an additional card. If they go above 21 they lose, with a reward of -1.
