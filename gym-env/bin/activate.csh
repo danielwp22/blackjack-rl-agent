@@ -9,17 +9,17 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV /home/danielwp22/Projects/gymnasium-projects/gym-env
+setenv VIRTUAL_ENV /Users/danielpalin/projects/blackjack-solver/gym-env
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/"bin":$PATH"
+setenv VIRTUAL_ENV_PROMPT gym-env
 
 
 set _OLD_VIRTUAL_PROMPT="$prompt"
 
 if (! "$?VIRTUAL_ENV_DISABLE_PROMPT") then
-    set prompt = '(gym-env) '"$prompt"
-    setenv VIRTUAL_ENV_PROMPT '(gym-env) '
+    set prompt = "("gym-env") $prompt:q"
 endif
 
 alias pydoc python -m pydoc

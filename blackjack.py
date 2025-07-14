@@ -15,10 +15,11 @@ env = gym.make("CustomBlackjack-v0")
 
 
 
-episodes = 100
+episodes = 1000
 q_state = Counter()
 alpha = 0.5
-learning_rate = 1.0
+discount_factor = 0.9
+learning_rate = 0.4
 episode_numbers = []
 episode_rewards = []
 
@@ -60,9 +61,9 @@ for episode in range(episodes):
         else: 
             new_action = np.random.randint(0,1)
 
-        sample = reward + learning_rate*q_state[(new_hand_total, new_action)]
+        sample = reward + discount_factor*q_state[(new_hand_total, new_action)] - q_state[(my_hand_total, action)]
 
-        q_state[(my_hand_total, action)] = (1-alpha)*q_state[(my_hand_total, action)] + alpha*sample    
+        q_state[(my_hand_total, action)] = q_state[(my_hand_total, action)] + learning_rate*sample    
 
         total_reward += reward
         episode_over = terminated or truncated
@@ -89,12 +90,3 @@ data.insert(0,["State", "Action", "Reward"])
 
 print(tabulate(data, headers="firstrow", tablefmt="grid"))
 
-    
-
-print(f"episode numbers: {episode_numbers}, episode rewards{episode_rewards}")
-plt.plot(episode_numbers, episode_rewards)
-plt.xlabel("Episode number")
-plt.ylabel("Episode reward")
-plt.title("Reward over episodes")
-plt.grid(True)
-plt.show()

@@ -55,3 +55,6 @@ The q values of different hands was displayed below, and it can be seen the tota
 
 
 The next objective is to add the player's ability to see the dealer's hand. After that more parameters and deep Q learning will be implemented. 
+
+
+With a learning rate of 0.01, even hitting on low hand totals resulted in negative rewards, because the agent lost so often. 
