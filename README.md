@@ -1,13 +1,33 @@
-# Blackjack solver using Deep Q-Learning
+## 🂡 Blackjack Solver using Deep Q-Learning
 
-### Using Gymnasium from OpenAI's Gym. 
+This project implements both **Q-learning** and **Deep Q-Learning (DQN)** algorithms to train agents to play Blackjack using environments from **Gymnasium** (OpenAI's Gym fork). The goal is to develop an agent that can beat the house and consistently win games using reinforcement learning.
 
-In this project, both Q learning and Deep Q learning algorithms were implemented on different blackjack gymnasium environments. 
-The basic Q-learning algorithm was able to achieve 40% winrates on test games, which is much better than a completely random player who achieves aronud a 20% winrate.
+## 🧠 Summary
 
-With the deep Q learning algorithm, models were achieved such that the algorithm won more than it lost by about 1%, allowing the player to win money. 
+- The **basic Q-learning agent** achieved around **40% win rate**, significantly outperforming a random player (~20%).
+- The **Deep Q-Learning agent**, implemented with PyTorch, was able to **win more than it lost by about 1%**, theoretically enabling it to **profit** over time.
 
-Future updates:
-- Adding batch sizes for cleaner gradient descent step
-- Removing dealer ace as input to neural network (not necessary)
-- Allowing the bot to see the deck, allowing it to count cards and achieve a higher winrate.
+![Learning Curve](https://i.imgur.com/v0Q7fVO.png)
+
+## 🛠️ Technologies
+
+- **Python**
+- **PyTorch**
+- **Gymnasium (Blackjack-v1, Custom Envs)**
+- **Matplotlib** (for visualization)
+
+## 🚀 Key Features
+
+- Tabular Q-learning implementation with epsilon-greedy exploration
+- Deep Q-Learning (DQN) with fully connected neural network
+- Custom Gymnasium environments for advanced training scenarios
+- Learning curve visualizations for performance tracking
+
+## 🧪 Planned Improvements
+
+- 🔄 Add batch training for more stable gradient descent updates  
+- 🃏 Remove dealer ace as a neural network input (to reduce state space)  
+- 🧮 Enable card counting by giving the agent access to the deck state  
+
+## 📂 Project Structure
+
