@@ -31,3 +31,9 @@ This project implements both **Q-learning** and **Deep Q-Learning (DQN)** algori
 
 ## 📂 Project Structure
 
+blackjack-deepq/
+├── blackjack_dqn.py # Deep Q-Learning implementation
+├── q_learning_agent.py # Tabular Q-learning implementation
+├── custom_envs/ # Optional custom Blackjack Gym environments
+├── utils/ # Helper functions and plotting
+└── README.md
