@@ -1,4 +1,4 @@
-## 🂡 Blackjack Solver using Deep Q-Learning
+## Blackjack Solver using Deep Q-Learning
 
 This project implements both **Q-learning** and **Deep Q-Learning (DQN)** algorithms to train agents to play Blackjack using environments from **Gymnasium** (OpenAI's Gym fork). The goal is to develop an agent that can beat the house and consistently win games using reinforcement learning.
 
